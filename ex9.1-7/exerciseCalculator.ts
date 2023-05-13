@@ -7,14 +7,13 @@ interface resultsObject {
   rating: number;
   ratingDescription: string;
 }
-const calculateExercises = (arr: number[], target: number): resultsObject => {
-  if (arr.length !== 7)
-    throw new Error("The array should have values for only a full week(7 values)");
+const calculateExercises = (target: number, arr: number[]): resultsObject => {
+  
   const periodLength = arr.length;
   const trainingDays = arr.length - 2;
 
   const sum = arr.reduce((acc, curr) => acc + curr, 0);
-  const average = sum / arr.length;
+  const average = sum / periodLength;
   let success: boolean;
   if (average >= target) {
     success = true;
@@ -39,5 +38,18 @@ const calculateExercises = (arr: number[], target: number): resultsObject => {
     ratingDescription,
   };
 };
+if (process.argv.length < 4) {
+  console.log(
+    "Please provide target and exercise hours for each day as command line arguments"
+  );
+  process.exit(1);
+}
+const target = Number(process.argv[2]);
+const arr = process.argv.slice(3).map(Number);
 
-console.log(calculateExercises([4,0,4,0,2,2,2], 2));
+if (isNaN(target) || arr.some(isNaN)) {
+  console.log("Provided values are not numbers");
+  process.exit(1);
+}
+console.log(calculateExercises(target, arr));
+
