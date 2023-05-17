@@ -22,13 +22,13 @@ const calculateBmi = (h: number, w: number) => {
   h = h * h;
   const bmi = w / h;
   if (bmi < 18.5) {
-    return console.log("Underweight (thin)");
+    return ("Underweight (thin)");
   } else if (bmi >= 18.5 && bmi <= 24.9) {
-    return console.log("Normal (healthy weight)");
+    return ("Normal (healthy weight)");
   } else if (bmi >= 25 && bmi <= 29.9) {
-    return console.log("Overweight (Pre-obese)");
+    return ("Overweight (Pre-obese)");
   } else {
-    return console.log("Obese (Unhealthy weight)");
+    return ("Obese (Unhealthy weight)");
   }
 };
 try {
@@ -41,3 +41,5 @@ try {
   }
   console.log(errorMessage);
 }
+
+export default calculateBmi;
