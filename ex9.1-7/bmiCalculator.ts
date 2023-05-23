@@ -18,17 +18,19 @@ const parseArguments = (args: string[]): BmiParams => {
 };
 
 const calculateBmi = (h: number, w: number) => {
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+
   h = h / 100;
   h = h * h;
   const bmi = w / h;
   if (bmi < 18.5) {
-    return ("Underweight (thin)");
+    return "Underweight (thin)";
   } else if (bmi >= 18.5 && bmi <= 24.9) {
-    return ("Normal (healthy weight)");
+    return "Normal (healthy weight)";
   } else if (bmi >= 25 && bmi <= 29.9) {
-    return ("Overweight (Pre-obese)");
+    return "Overweight (Pre-obese)";
   } else {
-    return ("Obese (Unhealthy weight)");
+    return "Obese (Unhealthy weight)";
   }
 };
 try {
