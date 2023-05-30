@@ -14,6 +14,6 @@ Content-Type: application/json
 {
     "date": "2018-01-11",
     "weather":"windy",
-    "visibility":"poor",
+    "visibility":"poorer",
     "comment":"unconfortable"
 }
