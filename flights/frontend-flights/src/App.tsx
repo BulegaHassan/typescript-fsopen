@@ -22,6 +22,7 @@ const App = () => {
     setVisibility(Visibility.Good);
     setComment("");
   };
+  
   const handleWeatherChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const selectedWeather = event.target.value as Weather;
     setWeather(selectedWeather);
