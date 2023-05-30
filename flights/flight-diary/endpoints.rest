@@ -1,0 +1,19 @@
+GET http://localhost:3001/ping
+
+###
+
+GET http://localhost:3001/api/diaries 
+
+###
+GET http://localhost:3001/api/diaries/3 
+
+###
+POST http://localhost:3001/api/diaries
+Content-Type: application/json
+
+{
+    "date": "2018-01-11",
+    "weather":"windy",
+    "visibility":"poor",
+    "comment":"unconfortable"
+}
