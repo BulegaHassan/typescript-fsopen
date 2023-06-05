@@ -4,13 +4,16 @@ GET http://localhost:3001/api/diagnoses
 
 GET http://localhost:3001/api/patients
 
+### 
+GET http://localhost:3001/api/patients/d2773336-f723-11e9-8f0b-362b9e155667
+
 ###
 POST http://localhost:3001/api/patients
 Content-Type: application/json
 
 {
     "name": "Sengendo Joash",
-    "ssn": "qw123-09877-987",
+    "ssn": "123-09877-987",
     "dateOfBirth": "1999-06-08",
     "gender":"male",
     "occupation":"FE dev"

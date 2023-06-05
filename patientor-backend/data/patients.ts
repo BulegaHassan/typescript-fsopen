@@ -42,6 +42,9 @@ const data = [
     occupation: "Digital evangelist",
   },
 ];
+// const updatedData = data.map((item) => {
+//   return { ...item, entries: [] };
+// });
 const patientEntries: PatientEntry[] = data.map((obj) => {
   const object = toNewPatientEntry(obj) as PatientEntry;
   object.id = obj.id;
