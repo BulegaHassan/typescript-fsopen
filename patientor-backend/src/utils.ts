@@ -46,6 +46,12 @@ const parseGender = (gender: unknown): Gender => {
   }
   return gender;
 };
+const parseArray = (arr: unknown) => {
+  if (!Array.isArray(arr)) {
+    throw new Error("Not an  Array: " + arr);
+  }
+  return arr;
+};
 
 const toNewPatientEntry = (object: unknown): NewPatientEntry => {
   if (!object || typeof object !== "object") {
@@ -56,14 +62,16 @@ const toNewPatientEntry = (object: unknown): NewPatientEntry => {
     "ssn" in object &&
     "dateOfBirth" in object &&
     "gender" in object &&
-    "occupation" in object && 'entries' in object
+    "occupation" in object &&
+    "entries" in object
   ) {
     const newEntry: NewPatientEntry = {
       name: parseName(object.name),
       dateOfBirth: parseDate(object.dateOfBirth),
       ssn: parseSsn(object.ssn),
       gender: parseGender(object.gender),
-      occupation: parseOccupation(object.occupation),      
+      occupation: parseOccupation(object.occupation),
+      entries: parseArray(object.entries),
     };
     return newEntry;
   }
