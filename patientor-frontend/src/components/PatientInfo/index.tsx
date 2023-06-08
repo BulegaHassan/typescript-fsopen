@@ -1,10 +1,11 @@
-import { Patient, Entry } from "../../types";
+import { Patient, Entry ,Diagnosis} from "../../types";
 import { useParams } from "react-router-dom";
 import { Male, Female } from "@mui/icons-material";
 interface Props {
   patients: Patient[];
+  diagnoses:Diagnosis[]
 }
-const PatientInfo = ({ patients }: Props) => {
+const PatientInfo = ({ patients,diagnoses }: Props) => {
   const id = useParams().id;
   const patient = patients.find((p) => p.id === id);
   const ourEntries = patient?.entries;
@@ -28,7 +29,13 @@ const PatientInfo = ({ patients }: Props) => {
               <div>
                 <ul>
                   {entry.diagnosisCodes.map((code) => (
-                    <li key={code}>{code}</li>
+                    <li key={code}>
+                      {code} {' '}
+                      {
+                        diagnoses.find((d) => d.code === code)
+                          ?.name
+                      }
+                    </li>
                   ))}
                 </ul>
               </div>
