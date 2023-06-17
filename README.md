@@ -1,5 +1,6 @@
 ## Full Stack Open - Part 9 Typescript
 This part is all about TypeScript: an open-source typed superset of JavaScript developed by Microsoft that compiles to plain JavaScript.
+### I have done exercises 1-24 thus meeting the minimum
 
 In this part, we will be using the tools previously introduced to build end-to-end features to an existing ecosystem with linters predefined and an existing codebase writing TypeScript. After doing this part, you should be able to understand, develop and configure projects using TypeScript.
 
