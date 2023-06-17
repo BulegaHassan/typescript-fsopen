@@ -15,3 +15,12 @@ Content clarified, Patientor example app structure refactored to a much simpler 
 - <a href='https://fullstackopen.com/en/part9/typing_an_express_app' target='_blank'>Typing an Express app</a>
 -  <a href='https://fullstackopen.com/en/part9/react_with_types' target='_blank'>React with types</a>
 -  <a href='https://fullstackopen.com/en/part9/grande_finale_patientor' target='_blank'>Grande finale: Patientor</a>
+
+### Certificate URL
+https://studies.cs.helsinki.fi/stats/api/certificate/fs-typescript/en/55cf4de32fcc4329bed129bb194bef97
+
+### Certificate
+![certificate-typescript](https://github.com/BulegaHassan/typescript-fsopen/assets/91388306/4110bedb-a0cd-4d5e-8c66-244a1bfd0270)
+
+### My contributions to the Course
+- Typo(https://github.com/fullstack-hy2020/fullstack-hy2020.github.io/pull/2920#event-9376929142)
